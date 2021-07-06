@@ -18,8 +18,9 @@ const FortuneCookie = () => {
   const handlePress = () => {
     if (fortunes.length > 0) {
       const fortuneIndex = Math.floor(Math.random() * fortunes.length) + 1;
-      setFortune(fortunes[fortuneIndex]);
+      return setFortune(fortunes[fortuneIndex]);
     }
+    return setFortune({ text: "Unexpected error :( please, reload app and try again" });
   };
 
   useEffect(() => {
