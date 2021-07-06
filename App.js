@@ -1,21 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Appbar } from 'react-native-paper';
+import FortuneCookie from './src/components/FortuneCookie/FortuneCookie';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+	return (
+		<>
+			<Appbar.Header>
+				<Appbar.Content title='Fortune Cookie' subtitle='Wise words for you :)' />
+			</Appbar.Header>
+			<FortuneCookie />
+			<StatusBar style='auto' />
+		</>
+	);
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
